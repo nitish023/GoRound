@@ -1,4 +1,25 @@
-# GoRound
-Hackathon project
+# Getting Started
 
-Description: GoRound is an application where individuals are able to save money through their day-to-day purchases and contribute it to their goals. Features include creating friend groups to save towards a goal, dashboards to manage your finances, and a chatbot to communicate financial concerns or questions. 
+Welcome to your new project.
+
+It contains these folders and files, following our recommended project layout:
+
+File or Folder | Purpose
+---------|----------
+`app/` | content for UI frontends goes here
+`db/` | your domain models and data go here
+`srv/` | your service models and code go here
+`package.json` | project metadata and configuration
+`readme.md` | this getting started guide
+
+
+## Next Steps
+
+- Open a new terminal and run `cds watch`
+- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
+- Start adding content, for example, a [db/schema.cds](db/schema.cds).
+
+
+## Learn More
+
+Learn more at https://cap.cloud.sap/docs/get-started/.
