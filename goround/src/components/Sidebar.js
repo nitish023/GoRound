@@ -1,31 +1,42 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './Sidebar.css';
-// import { 
-//   MdHomeOutline, 
-//   MdTargetVariantOutline, 
-//   MdAccountOutline 
-// } from 'react-icons/md'; // <-- These are *Material* icons, not community
-
-// // For Material Community Icons (from mdi), import from mdi:
-// import { 
-//   MdiHomeOutline, 
-//   MdiTarget, 
-//   MdiAccountCircleOutline 
-// } from 'react-icons/mdi';
 import Icon from '@mdi/react';
 import { mdiHomeVariant } from '@mdi/js';
 
 function Sidebar() {
   return (
-    <div className="sidebar">
-      <NavLink to="/" className="tab" title="home" end>
-        <Icon path={mdiHomeVariant} size={1} color="white" />
+    <div className="w-20 bg-gray-900 h-screen flex flex-col items-center py-4 space-y-10 border-2 border-[#1abc9c]">
+      <NavLink 
+        to="/" 
+        end
+        className={({ isActive }) => 
+          `flex items-center justify-center w-12 h-12 text-white hover:bg-gray-700 ${
+            isActive ? 'bg-gray-700' : ''
+          }`
+        } 
+        title="home"
+      >
+        <Icon path={mdiHomeVariant} size={1} />
       </NavLink>
-      <NavLink to="/goals" className="tab">
+
+      <NavLink
+        to="/goals"
+        className={({ isActive }) => 
+          `text-white px-4 py-2 hover:bg-gray-700 rounded-none ${
+            isActive ? 'bg-gray-700' : ''
+          }`
+        }
+      >
         Goals
       </NavLink>
-      <NavLink to="/profile" className="tab">
+
+      <NavLink
+        to="/profile"
+        className={({ isActive }) => 
+          `text-white px-4 py-2 hover:bg-gray-700 rounded-none ${
+            isActive ? 'bg-gray-700' : ''
+          }`
+        }
+      >
         Profile
       </NavLink>
     </div>
